@@ -1,0 +1,21 @@
+-x
+objective-c++
+-arch
+armv7
+-fpascal-strings
+-O0
+-DDEBUG
+-isysroot
+/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk
+-g
+-fvisibility-inlines-hidden
+-miphoneos-version-min=7.0
+-iquote
+-iquote
+-I/Users/ll/Documents/github/gwb_ios/ios_gwb/Build/Products/Debug-iphoneos/include
+-I/Users/ll/Documents/github/gwb_ios/ios_gwb/Utilities
+-F/Users/ll/Documents/github/gwb_ios/ios_gwb/Build/Products/Debug-iphoneos
+arm-apple-darwin13.3.0
+"4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.34.4)"
+SDK_PRODUCT_BUILD_VERSION=12A4265u
+12A4265u
