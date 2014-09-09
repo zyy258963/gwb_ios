@@ -25,7 +25,7 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withUrl:(NSString *)itemUrl withId:(NSString *)itemId withTitle:(NSString *)itemTitle{
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        myUrl = [NSString stringWithFormat:@"%@%@",@"http://117.79.84.185:8080/FileUpload/upload/books/",itemUrl];
+        myUrl = [NSString stringWithFormat:@"%@%@",@"http://weebo.com.cn/FileUpload/upload/books/",itemUrl];
         myId = itemId;
         [myId retain];
         myTitle = itemTitle;

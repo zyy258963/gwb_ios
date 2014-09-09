@@ -9,7 +9,7 @@
 #import "UserProfileManager.h"
 #import "UserManager.h"
 
-#define K_MAX_ARRAYCOUNT 3
+#define K_MAX_ARRAYCOUNT 1
 static UserProfileManager *_sharedManager = nil;
 
 @implementation UserProfileManager

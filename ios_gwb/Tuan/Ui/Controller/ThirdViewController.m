@@ -164,7 +164,7 @@
         [self setLoadingUI:NO];
         
         if (items.count == 0) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。\n请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
             alert.tag = 999;
             [alert show];
             [alert release];
@@ -188,7 +188,7 @@
     [self setLoadingUI:NO];
     
     if (items.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。\n请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         alert.tag = 999;
         [alert show];
         [alert release];
@@ -219,7 +219,7 @@
     [self setLoadingUI:NO];
     
     if (items.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。\n请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         alert.tag = 999;
         [alert show];
         [alert release];
