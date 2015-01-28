@@ -394,6 +394,7 @@
 		3C6C302514597BD800A1A424 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6C302414597BD800A1A424 /* libz.dylib */; };
 		3C96E6DD145AC28D0072006B /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C96E6DC145AC28A0072006B /* libicucore.dylib */; };
 		3C97B74D14872D0A00953FBF /* libSystem.B.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C97B74C14872D0A00953FBF /* libSystem.B.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6A3EC94719C33B7600F0B773 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3EC94619C33B7600F0B773 /* MainWindow-iPad.xib */; };
 		CEBAF1DD13CFE09D0087E53A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBAF1DC13CFE09D0087E53A /* QuartzCore.framework */; };
 		CEC31ADB13A0F2DC00363D03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC31ADA13A0F2DC00363D03 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CEC31ADD13A0F2DC00363D03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC31ADC13A0F2DC00363D03 /* Foundation.framework */; };
@@ -791,6 +792,7 @@
 		3C944AC114921CE700DD04F2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		3C96E6DC145AC28A0072006B /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		3C97B74C14872D0A00953FBF /* libSystem.B.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSystem.B.dylib; path = usr/lib/libSystem.B.dylib; sourceTree = SDKROOT; };
+		6A3EC94619C33B7600F0B773 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Tuan/iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		CEBAF1DC13CFE09D0087E53A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEC06CA913CA976400D80C66 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CEC0AFED13CDD35200165F1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -1512,9 +1514,18 @@
 			path = Xml;
 			sourceTree = "<group>";
 		};
+		6A3EC94519C33B7500F0B773 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				6A3EC94619C33B7600F0B773 /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		CEC31ACB13A0F2DC00363D03 = {
 			isa = PBXGroup;
 			children = (
+				6A3EC94519C33B7500F0B773 /* iPad */,
 				2C9A85DB174DFD7400D878B7 /* libz.1.2.5.dylib */,
 				2CE41CC716AF887F00112680 /* ImageIO.framework */,
 				2C47A7B9168C322800D3A22E /* libiconv.dylib */,
@@ -1528,6 +1539,7 @@
 				CEC31AD713A0F2DC00363D03 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		CEC31AD713A0F2DC00363D03 /* Products */ = {
 			isa = PBXGroup;
@@ -1844,6 +1856,7 @@
 				2C0C23E91926018B000F9D51 /* Reader.pdf in Resources */,
 				2C94D1521925A6EA00D5484F /* cellLine@2x.png in Resources */,
 				2C7990E31945F08400E16D3F /* btnSmall@2x.png in Resources */,
+				6A3EC94719C33B7600F0B773 /* MainWindow-iPad.xib in Resources */,
 				2C0C23DC1926018B000F9D51 /* Reader-Button-N.png in Resources */,
 				2C0C23D51926018B000F9D51 /* AppIcon-114.png in Resources */,
 				2CA299AF19482EE5009F0E28 /* btnBigSel@2x.png in Resources */,
@@ -2040,7 +2053,7 @@
 					armv7,
 				);
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: chen yanguang (46H9C974W8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -2064,7 +2077,7 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: chen yanguang (46H9C974W8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_THUMB_SUPPORT = NO;
@@ -2084,7 +2097,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Laka Science and Technology Development Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2096,7 +2109,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Utilities\"";
 				INFOPLIST_FILE = "Tuan/cc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Tuan/Ui/3rdparty\"",
@@ -2109,7 +2122,7 @@
 				PROVISIONING_PROFILE = "E1CABD0B-D253-4AA7-8221-CFF00B0E9E6A";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2120,7 +2133,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Laka Science and Technology Development Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INPUT_FILETYPE = automatic;
@@ -2135,7 +2148,7 @@
 					"\"$(SRCROOT)/Utilities/openssl\"",
 				);
 				INFOPLIST_FILE = "Tuan/cc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Tuan/Ui/3rdparty\"",
@@ -2148,7 +2161,7 @@
 				PROVISIONING_PROFILE = "E1CABD0B-D253-4AA7-8221-CFF00B0E9E6A";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

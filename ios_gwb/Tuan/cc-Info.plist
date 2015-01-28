@@ -46,6 +46,8 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
+	<key>NSMainNibFile~ipad</key>
+	<string>MainWindow-iPad</string>
 	<key>RSA public key</key>
 	<string>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDZZJ1/uhCk25i+mHmk/VTYFDTKH949RYEjotkVIobSlRw61nrKZ9kBgz58P8DJ/BydDtOMcJGMXJlNFhD7Z+FNdF5fJYXhQ5H9oaCyxKkaUb6t+wl/DT7YigeZBZKu4HhELLCj39qw3sUY8bX6HP1owoSmj/rIjG9zfrsQ35ob9wIDAQAB</string>
 	<key>SignerIdentity</key>
