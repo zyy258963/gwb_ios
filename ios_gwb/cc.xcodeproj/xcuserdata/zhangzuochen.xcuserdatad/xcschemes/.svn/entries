@@ -2,7 +2,7 @@
 
 dir
 407
-https://zhangzuochen@172.26.1.241/svn/iosapp/FeiTu/trunk/FeiTu.xcodeproj
+https://zhangzuochen@172.26.1.241/svn/iosapp/FeiTu/trunk/FeiTu.xcodeproj/xcuserdata/zhangzuochen.xcuserdatad/xcschemes
 https://zhangzuochen@172.26.1.241/svn/iosapp
 
 
@@ -26,14 +26,14 @@ zhangzuochen
 
 1e08ab6f-ef13-9d40-9ec7-e23f4c2e16a1
 
-heyf.pbxuser
+Copy of coupon.xcscheme
 file
 
 
 
 
-2011-11-30T02:01:34.000000Z
-b23d68ce8ce090185dd0c6265bb7ba49
+2012-12-27T07:50:32.000000Z
+c7687b1cb7bcc3446980fc357c1d0ccd
 2012-12-31T07:49:28.619250Z
 407
 zhangzuochen
@@ -58,19 +58,16 @@ zhangzuochen
 
 
 
-88271
+3109
 
-xcuserdata
-dir
-
-heyf.mode1v3
+coupon.xcscheme
 file
 
 
 
 
-2011-11-30T02:01:34.000000Z
-62f1118688d91ddaa56d7cc96c5d3098
+2012-12-28T08:18:57.000000Z
+820736c1cfa77c95dbf16566c4245308
 2012-12-31T07:49:28.619250Z
 407
 zhangzuochen
@@ -95,16 +92,16 @@ zhangzuochen
 
 
 
-54360
+3111
 
-project.pbxproj
+xcschememanagement.plist
 file
 
 
 
 
-2012-12-31T07:32:45.000000Z
-565650a128437f462aac6891d2feb2e6
+2012-07-19T01:54:56.000000Z
+32b2bb21d9e963ce8af2515b67822a1b
 2012-12-31T07:49:28.619250Z
 407
 zhangzuochen
@@ -129,8 +126,5 @@ zhangzuochen
 
 
 
-226685
-
-project.xcworkspace
-dir
+582
 
