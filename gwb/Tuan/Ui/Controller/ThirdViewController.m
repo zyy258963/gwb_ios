@@ -88,7 +88,7 @@
         
         NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-        NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+        NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
         
         FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
         if (![db2 open]) {
@@ -135,7 +135,7 @@
         
         NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-        NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+        NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
         
         FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
         if (![db2 open]) {
@@ -164,7 +164,7 @@
         [self setLoadingUI:NO];
         
         if (items.count == 0) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。\n请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库,我们会尽快为您录入。请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
             alert.tag = 999;
             [alert show];
             [alert release];
@@ -188,7 +188,7 @@
     [self setLoadingUI:NO];
     
     if (items.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。\n请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         alert.tag = 999;
         [alert show];
         [alert release];
@@ -219,7 +219,7 @@
     [self setLoadingUI:NO];
     
     if (items.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。\n请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         alert.tag = 999;
         [alert show];
         [alert release];

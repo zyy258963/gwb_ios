@@ -25,7 +25,7 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withUrl:(NSString *)itemUrl withId:(NSString *)itemId withTitle:(NSString *)itemTitle{
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        myUrl = [NSString stringWithFormat:@"%@%@",@"http://weebo.com.cn/FileUpload/upload/books/",itemUrl];
+        myUrl = [NSString stringWithFormat:@"%@%@",@"http://117.79.84.185:8080/FileUpload/upload/books/",itemUrl];
         myId = itemId;
         [myId retain];
         myTitle = itemTitle;
@@ -64,6 +64,12 @@
     
     [super viewDidLoad];
     
+    if (!_logQuery) {
+        _logQuery = [[LogQuery alloc] init];
+        _logQuery.mytarget = self;
+    }
+    
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(downpage:)
                                                  name:@"downpage"
@@ -78,7 +84,7 @@
     
     NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
     FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
     if (![db2 open]) {
@@ -138,6 +144,10 @@
         
         if (document != nil) // Must have a valid ReaderDocument object in order to proceed with things
         {
+            
+            [_logQuery takeTongJiDoc:myTitle];
+
+            
             ReaderViewController *readerViewController = [[ReaderViewController alloc] initWithReaderDocument:document];
             
             readerViewController.delegate = self; // Set the ReaderViewController delegate to self
@@ -216,7 +226,7 @@
     //写入本地数据库
     NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
     FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
     if (![db2 open]) {
@@ -235,6 +245,10 @@
     
     if (document != nil) // Must have a valid ReaderDocument object in order to proceed with things
     {
+        
+        [_logQuery takeTongJiDoc:myTitle];
+        
+        
         ReaderViewController *readerViewController = [[ReaderViewController alloc] initWithReaderDocument:document];
         
         readerViewController.delegate = self; // Set the ReaderViewController delegate to self
@@ -242,6 +256,8 @@
         readerViewController.modalPresentationStyle = UIModalPresentationFullScreen;
         
         [self presentViewController:readerViewController animated:NO completion:nil];
+        
+        
     }
     
 }
@@ -249,7 +265,7 @@
 - (IBAction)shouCangBtn:(id)sender {
     NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
     FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
     if (![db2 open]) {
@@ -287,7 +303,7 @@
     
     NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
     FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
     if (![db2 open]) {

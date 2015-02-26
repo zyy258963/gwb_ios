@@ -16,6 +16,7 @@
     IBOutlet UITextField *nameText;
     IBOutlet UIImageView *bgImg;
     
+    IBOutlet UILabel *labelTel;
     
     LoginQuery *query;
     LogQuery *_logQuery;
@@ -23,6 +24,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *nameText;
 @property (nonatomic, retain) IBOutlet UIImageView *bgImg;
+@property (nonatomic, retain) IBOutlet UILabel *labelTel;
 
 - (void)setLoadingUI:(BOOL)isLoading;
 

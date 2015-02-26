@@ -16,6 +16,7 @@
 #import "TableViewCellHelper.h"
 #import "ReaderViewController.h"
 #import "PDFView.h"
+#import "LogQuery.h"
 
 
 @interface FourthViewController : BaseViewController<UIScrollViewDelegate,ReaderViewControllerDelegate>
@@ -42,6 +43,7 @@
     
     
     PDFView *pdfview;
+    LogQuery *_logQuery;
         
 }
 

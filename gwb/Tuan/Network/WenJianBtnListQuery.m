@@ -45,6 +45,9 @@
                                                             @"telephone",
                                                             @"macAddress",
                                                             nil];
+    
+    NSLog(@"---------123456-----------%@",[UserManager sharedManager].userID);
+    
     NSMutableArray *values = [NSMutableArray arrayWithObjects:@"listCategory",
                                                                 [UserManager sharedManager].userID,
                                                                 uuid,
@@ -71,7 +74,8 @@
     NSDictionary *head = [content objectForKey:@"header"];
     int code = [[head objectForKey:@"code"] intValue];
     NSString *message = [head objectForKey:@"msg"];
-        
+    
+    NSLog(@"%@-----code---",code);
     if (code == 1)
     {
         
@@ -97,6 +101,27 @@
         if (_mytarget && [_mytarget respondsToSelector:@selector(getWenJianBtnListComplete:)]) {
             [_mytarget performSelector:@selector(getWenJianBtnListComplete:) withObject:nil];
         }
+//    }else{
+//        
+//        NSLog(@"-----------WebJianBtnListQuery-----m---NO--");
+//        [UserManager sharedManager].userInfo = NO;
+//        [UserManager sharedManager].userID = @"";
+//        [UserManager sharedManager].userName = @"";
+//        
+//        
+//        TuanAppDelegate *temp = (TuanAppDelegate *)[[UIApplication sharedApplication] delegate];
+//        
+//        [UIView beginAnimations:@"ToggleViews" context:nil];
+//        [UIView setAnimationDuration:0.3f];
+//        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//        [temp.window bringSubviewToFront:temp.loginNavController.view];
+//        temp.loginNavController.view.frame = CGRectMake(0,0,temp.loginNavController.view.frame.size.width,
+//                                                               temp.loginNavController.view.frame.size.height);
+//        
+//        [UIView commitAnimations];
+//        
+//    }
+
     }else if (code == 2){
         [UserManager sharedManager].userInfo = NO;
         [UserManager sharedManager].userID = @"";
@@ -109,10 +134,8 @@
         [UIView setAnimationDuration:0.3f];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
         [temp.window bringSubviewToFront:temp.loginNavController.view];
-        temp.loginNavController.view.frame = CGRectMake(0,
-                                                               0,
-                                                               temp.loginNavController.view.frame.size.width,
-                                                               temp.loginNavController.view.frame.size.height);
+        temp.loginNavController.view.frame = CGRectMake(0,0,temp.loginNavController.view.frame.size.width,
+                                                        temp.loginNavController.view.frame.size.height);
         
         [UIView commitAnimations];
         
@@ -121,7 +144,7 @@
             [_mytarget performSelector:@selector(getWenJianBtnListQueryError:) withObject:message];
         }
     }
-    
+
 }
 
 - (void)getWenJianBtnListErrorWithObj:(NSObject *)obj

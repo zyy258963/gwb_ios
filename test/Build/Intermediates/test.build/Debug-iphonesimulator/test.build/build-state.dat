@@ -1,190 +1,0 @@
-Ttest
-v7
-r1
-cCheck dependencies
-cCompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.o /Users/ll/Documents/github/gwb_ios/test/test/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.o /Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.o /Users/ll/Documents/github/gwb_ios/test/test/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test normal i386
-cCompileStoryboard /Users/ll/Documents/github/gwb_ios/test/test/Base.lproj/Main.storyboard
-cCompileAssetCatalog /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app /Users/ll/Documents/github/gwb_ios/test/test/Images.xcassets
-cProcessInfoPlistFile /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/Info.plist /Users/ll/Documents/github/gwb_ios/test/test/Info.plist
-cGenerateDSYMFile /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app.dSYM /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test
-cTouch /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app
-
-CBuild AST from /Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m
-r0
-
-CBuild AST from /Users/ll/Documents/github/gwb_ios/test/test/ViewController.m
-r0
-
-CBuild AST from /Users/ll/Documents/github/gwb_ios/test/test/main.m
-r0
-
-CCheck dependencies
-r0
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesc686f228b4c3b941^83bff328b4c3b941^---0#1#1#--18"Check dependencies36"A328AD9B-4B3E-4E1A-AD7A-F672CA3D5CEF-
-
-CCompileAssetCatalog /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app /Users/ll/Documents/github/gwb_ios/test/test/Images.xcassets
-s432256024.109889
-e432256025.164120
-r1
-xCompileAssetCatalog
-x/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app
-x/Users/ll/Documents/github/gwb_ios/test/test/Images.xcassets
-o/* com.apple.actool.compilation-results */
-o/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/LaunchImage-700-568h@2x.png
-o/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/assetcatalog_generated_info.plist
-o
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile asset catalog /Users/ll/Documents/github/gwb_ios/test/test/Images.xcassets86"CompileAssetCatalog Build/Products/Debug-iphonesimulator/test.app test/Images.xcassets66321c18b4c3b941^d5032a19b4c3b941^-296"/* com.apple.actool.compilation-results *//Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/LaunchImage-700-568h@2x.png/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@68"file:///Users/ll/Documents/github/gwb_ios/test/test/Images.xcassets/0000000000000000^1158"CompileAssetCatalog Build/Products/Debug-iphonesimulator/test.app test/Images.xcassets    cd /Users/ll/Documents/github/gwb_ios/test    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --platform iphonesimulator --minimum-deployment-target 8.0 --target-device iphone --target-device ipad --compress-pngs --compile /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app /Users/ll/Documents/github/gwb_ios/test/test/Images.xcassets36"961D4171-E0AB-4782-9374-77E0A49731D8-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CCompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.o /Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s432256023.379277
-e432256023.931276
-r1
-xCompileC
-xBuild/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.o
-x/Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m
-d/Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.h
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Compile /Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m193"CompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.o test/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4b3f6117b4c3b941^a168ee17b4c3b941^---0#0#1#-19%DVTDocumentLocation2@65"file:///Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m0000000000000000^3665"CompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.o test/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ll/Documents/github/gwb_ios/test    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/ll/Library/Developer/Xcode/DerivedData/ModuleCache -fmodules-prune-interval=86400 -fmodules-prune-after=345600 -Wnon-modular-include-in-framework-module -Werror=non-modular-include-in-framework-module -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wunreachable-code -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=0 -isysroot /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=8.0 -iquote /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-generated-files.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-own-target-headers.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-all-target-headers.hmap -iquote /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-project-headers.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/DerivedSources/i386 -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/DerivedSources -F/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator -MMD -MT dependencies -MF /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.dia -c /Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.m -o /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.o36"AF6297F4-C9F2-437E-B345-831131055CC5-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CCompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.o /Users/ll/Documents/github/gwb_ios/test/test/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s432256023.379132
-e432256023.925431
-r1
-xCompileC
-xBuild/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.o
-x/Users/ll/Documents/github/gwb_ios/test/test/ViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/ll/Documents/github/gwb_ios/test/test/ViewController.m
-d/Users/ll/Documents/github/gwb_ios/test/test/ViewController.h
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/ll/Documents/github/gwb_ios/test/test/ViewController.m199"CompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.o test/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler19376117b4c3b941^87fbec17b4c3b941^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/ll/Documents/github/gwb_ios/test/test/ViewController.m0000000000000000^3683"CompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.o test/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ll/Documents/github/gwb_ios/test    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/ll/Library/Developer/Xcode/DerivedData/ModuleCache -fmodules-prune-interval=86400 -fmodules-prune-after=345600 -Wnon-modular-include-in-framework-module -Werror=non-modular-include-in-framework-module -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wunreachable-code -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=0 -isysroot /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=8.0 -iquote /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-generated-files.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-own-target-headers.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-all-target-headers.hmap -iquote /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-project-headers.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/DerivedSources/i386 -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/DerivedSources -F/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator -MMD -MT dependencies -MF /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.d --serialize-diagnostics /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.dia -c /Users/ll/Documents/github/gwb_ios/test/test/ViewController.m -o /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.o36"288A8C97-4D4B-44D5-9FE1-E6F9CB27F2A0-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CCompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.o /Users/ll/Documents/github/gwb_ios/test/test/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s432256023.379614
-e432256023.922576
-r1
-xCompileC
-xBuild/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.o
-x/Users/ll/Documents/github/gwb_ios/test/test/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/ll/Documents/github/gwb_ios/test/test/main.m
-d/Users/ll/Documents/github/gwb_ios/test/test/AppDelegate.h
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile /Users/ll/Documents/github/gwb_ios/test/test/main.m179"CompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.o test/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler276a6117b4c3b941^552eec17b4c3b941^---0#0#1#-19%DVTDocumentLocation2@58"file:///Users/ll/Documents/github/gwb_ios/test/test/main.m0000000000000000^3623"CompileC Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.o test/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ll/Documents/github/gwb_ios/test    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/ll/Library/Developer/Xcode/DerivedData/ModuleCache -fmodules-prune-interval=86400 -fmodules-prune-after=345600 -Wnon-modular-include-in-framework-module -Werror=non-modular-include-in-framework-module -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wunreachable-code -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=0 -isysroot /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=8.0 -iquote /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-generated-files.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-own-target-headers.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-all-target-headers.hmap -iquote /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/test-project-headers.hmap -I/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/DerivedSources/i386 -I/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/DerivedSources -F/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator -MMD -MT dependencies -MF /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.dia -c /Users/ll/Documents/github/gwb_ios/test/test/main.m -o /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.o36"C8B8A3EE-341F-48A6-95FF-6AEAE2B34E91-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CCompileStoryboard /Users/ll/Documents/github/gwb_ios/test/test/Base.lproj/Main.storyboard
-s432256024.109713
-e432256025.750586
-r1
-xCompileStoryboard
-x/Users/ll/Documents/github/gwb_ios/test/test/Base.lproj/Main.storyboard
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile Storyboard file /Users/ll/Documents/github/gwb_ios/test/test/Base.lproj/Main.storyboard49"CompileStoryboard test/Base.lproj/Main.storyboard632b1c18b4c3b941^2027c019b4c3b941^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/ll/Documents/github/gwb_ios/test/test/Base.lproj/Main.storyboard0000000000000000^865"CompileStoryboard test/Base.lproj/Main.storyboard    cd /Users/ll/Documents/github/gwb_ios/test    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin/..    /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --target-device iphone --target-device ipad --errors --warnings --notices --module test --minimum-deployment-target 8.0 --output-format human-readable-text --compile /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/Base.lproj/Main.storyboardc /Users/ll/Documents/github/gwb_ios/test/test/Base.lproj/Main.storyboard36"2FAEED9F-2587-4DFE-A3BB-4A02A6DA878C-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CGenerateDSYMFile /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app.dSYM /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test
-s432256025.753236
-e432256025.783873
-r1
-xGenerateDSYMFile
-x/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app.dSYM
-x/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Generate /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app.dSYM118"GenerateDSYMFile Build/Products/Debug-iphonesimulator/test.app.dSYM Build/Products/Debug-iphonesimulator/test.app/testb8e4c019b4c3b941^9facc819b4c3b941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app.dSYM0034d820ddffdf42^664"GenerateDSYMFile Build/Products/Debug-iphonesimulator/test.app.dSYM Build/Products/Debug-iphonesimulator/test.app/test    cd /Users/ll/Documents/github/gwb_ios/test    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test -o /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app.dSYM36"210E0D31-8C7C-48D7-B1E7-37EE69F6501D-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CLd /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test normal i386
-s432256023.932278
-e432256024.107729
-r1
-xLd
-x/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test
-xnormal
-xi386
-d/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/test.LinkFileList
-d/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/ViewController.o
-d/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/AppDelegate.o
-d/Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/main.o
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/libobjc.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0/lib/darwin/libclang_rt.ios.a
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/Security.framework/Security
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/libextension.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libcache_sim.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libcommonCrypto.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libcompiler_rt.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libcopyfile_sim.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libcorecrypto.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libdyld.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/liblaunch_sim.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libmacho_sim.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libremovefile_sim.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_c.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_coreservices.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_coretls.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_info.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_kernel.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_m.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_malloc.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libnotify_sim.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_platform.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_pthread.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_sandbox.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libsystem_sim_trace.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libunwind_sim.dylib
-d/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk/usr/lib/system/libxpc.dylib
-d/usr/lib/system/libsystem_kernel.dylib
-d/usr/lib/system/libsystem_platform.dylib
-d/usr/lib/system/libsystem_pthread.dylib
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Link /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test65"Ld Build/Products/Debug-iphonesimulator/test.app/test normal i38665c3ee17b4c3b941^3e951b18b4c3b941^---0#0#1#--1379"Ld Build/Products/Debug-iphonesimulator/test.app/test normal i386    cd /Users/ll/Documents/github/gwb_ios/test    export IPHONEOS_DEPLOYMENT_TARGET=8.0    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk -L/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator -F/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator -filelist /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/test.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=8.0 -Xlinker -dependency_info -Xlinker /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/Objects-normal/i386/test_dependency_info.dat -o /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/test36"5C7FB958-FC85-45FB-99FE-3E8AB7BC3C44-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CProcessInfoPlistFile /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/Info.plist /Users/ll/Documents/github/gwb_ios/test/test/Info.plist
-s432256025.751315
-e432256025.752850
-r1
-xProcessInfoPlistFile
-x/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/Info.plist
-x/Users/ll/Documents/github/gwb_ios/test/test/Info.plist
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Process /Users/ll/Documents/github/gwb_ios/test/test/Info.plist93"ProcessInfoPlistFile Build/Products/Debug-iphonesimulator/test.app/Info.plist test/Info.plist5a67c019b4c3b941^90bbc019b4c3b941^---0#0#1#-19%DVTDocumentLocation2@62"file:///Users/ll/Documents/github/gwb_ios/test/test/Info.plist0000000000000000^862"ProcessInfoPlistFile Build/Products/Debug-iphonesimulator/test.app/Info.plist test/Info.plist    cd /Users/ll/Documents/github/gwb_ios/test    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/ll/Documents/github/gwb_ios/test/test/Info.plist -genpkginfo /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/ll/Documents/github/gwb_ios/test/Build/Intermediates/test.build/Debug-iphonesimulator/test.build/assetcatalog_generated_info.plist -o /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/Info.plist36"155E33C7-1F8C-404C-BB21-CC2323632C50-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-
-CTouch /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app
-s432256025.784365
-e432256025.790531
-r1
-xTouch
-x/Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Touch /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app51"Touch Build/Products/Debug-iphonesimulator/test.appbedbc819b4c3b941^f261ca19b4c3b941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app/0000000000000000^414"Touch Build/Products/Debug-iphonesimulator/test.app    cd /Users/ll/Documents/github/gwb_ios/test    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ll/Documents/github/gwb_ios/test/Build/Products/Debug-iphonesimulator/test.app36"4F0C210A-3E41-4457-A6D7-224E63F58592-
-bA25EC03E-A61B-42AF-9D86-3FAAF265A00D
-

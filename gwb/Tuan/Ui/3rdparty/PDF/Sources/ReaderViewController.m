@@ -36,6 +36,9 @@
 
 @interface ReaderViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate,
 									ReaderMainToolbarDelegate, ReaderMainPagebarDelegate, ReaderContentViewDelegate, ThumbsViewControllerDelegate,FPPopoverControllerDelegate,UIAlertViewDelegate>
+
+
+
 @end
 
 @implementation ReaderViewController
@@ -64,6 +67,8 @@
 #pragma mark Constants
 
 #define PAGING_VIEWS 3
+
+#define MAX_SAVE  1
 
 #define STATUS_HEIGHT 20.0f
 
@@ -319,6 +324,12 @@
                                              selector:@selector(chooseMyMuLu:)
                                                  name:@"choosemulu"
                                                object:nil];
+
+    
+    if (!_logQuery) {
+        _logQuery = [[LogQuery alloc] init];
+        _logQuery.mytarget = self;
+    }
     
 	assert(document != nil); // Must have a valid ReaderDocument
 
@@ -818,7 +829,7 @@
 #if (READER_ENABLE_MAIL == TRUE) // Option
     NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
     FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
     if (![db2 open]) {
@@ -842,14 +853,14 @@
             //没收藏
             //isShouCang = NO;
             
-            if (tempIndex >= 3) {
+            if (tempIndex >= MAX_SAVE) {
                 //[OMGToast showWithText:@"您已经收藏3篇文档,请删除多余文档后再收藏!" bottomOffset:20 duration:140];
-                [self.view makeToast:@"您已经收藏3篇文档,请删除多余文档后再收藏!"
+                [self.view makeToast:@"您已经收藏1篇文档,请删除多余文档后再收藏!"
                             duration:2.0
                             position:@"bottom"
                                title:nil];
             }else{
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"为了节省您的手机空间，‘我的常用文档’内只能存放三篇文档，请慎重选择！" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"继续",nil];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"为了节省您的手机空间，‘我的常用文档’内只能存放1篇文档，请慎重选择！" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"继续",nil];
                 alertView.tag = 101;
                 [alertView show];
                 //[alertView release];
@@ -874,7 +885,7 @@
     
     NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
     FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
     if (![db2 open]) {
@@ -889,11 +900,14 @@
         [db2 executeUpdate:@"UPDATE BOOKS SET SHOUCANG = ? WHERE ID = ?", @"1", [ConfigManager sharedManager].cangId];
         
         //[OMGToast showWithText:@"已存入我的常用文档" bottomOffset:20 duration:140];
+
+        [_logQuery takeTongJiSave:[ConfigManager sharedManager].cangId];
         
         [self.view makeToast:@"已存入我的常用文档"
                     duration:2.0
                     position:@"bottom"
                        title:nil];
+        
         
     }else if (alertView.tag == 102 && buttonIndex == 1){
 //        isShouCang = NO;

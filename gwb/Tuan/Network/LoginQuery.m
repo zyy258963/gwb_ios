@@ -40,7 +40,9 @@
         uuid =  [SFHFKeychainUtils getPasswordForUsername:@"UUID" andServiceName:@"DAKA" error:nil];
     }
     
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://117.79.84.185:8080/GwbProject/IosLoginAction"];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosLoginAction"];
+    
+    NSLog(@"---------%@-----222222---------",self.loginName);
     
     NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",@"macAddress",nil];
     NSArray *values = [NSArray arrayWithObjects:@"appLogin",self.loginName,uuid,nil];
@@ -72,6 +74,7 @@
     
     if (code == 1) 
     {
+        NSLog(@"-----------loginQuery-----m---YES--");
         [UserManager sharedManager].userInfo = YES;
         [UserManager sharedManager].userID = self.loginName;
         [UserManager sharedManager].userName = self.loginName;
@@ -111,6 +114,7 @@
     
     if (code == 1)
     {
+        NSLog(@"-----------loginQuery-----m---NO--");
         [UserManager sharedManager].userInfo = NO;
         [UserManager sharedManager].userID = @"";
         [UserManager sharedManager].userName = @"";
@@ -163,5 +167,59 @@
             result[12], result[13], result[14], result[15]
             ]; 
 }
+
+
+
+- (void)checkTel
+{
+    [self cancelRequest];
+    
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosLoginAction"];
+    
+    NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",nil];
+    NSArray *values = [NSArray arrayWithObjects:@"showTel",self.loginName,nil];
+    
+    self.sender= [RequestSender requestSenderWithURL:baseUrl
+                                             usePost:2
+                                                keys:keys
+                                              values:values
+                                            delegate:self
+                                    completeSelector:@selector(loginSystemComplete:obj:)
+                                       errorSelector:@selector(loginSystemErrorWithObj:)
+                                    selectorArgument:@"网络连接失败"];
+    [self.sender send];
+    
+}
+
+- (void)checkTelComplete:(NSData *)data obj:(NSObject *)obj
+{
+    [self resetSender];
+    
+    NSLog(@"-----------22222222222-----");
+    
+    NSString *stringData =  [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    NSDictionary *json = (NSDictionary *)[stringData JSONValue];
+    NSDictionary *content = [json objectForKey:@"content"];
+    NSString *showTel = [content objectForKey:@"showTel"];
+    
+    NSLog(@"-----------111-----%@----",showTel);
+    if ([showTel isEqualToString:@"1"])
+    {
+       _showTel = @"1";
+    }else {
+       _showTel = @"0";
+    }
+    
+}
+
+- (void)checkTelErrorWithObj:(NSObject *)obj
+{
+    [self resetSender];
+    
+   _showTel = @"0";
+    
+}
+
 
 @end

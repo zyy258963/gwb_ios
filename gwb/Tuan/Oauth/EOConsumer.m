@@ -46,7 +46,7 @@
 	return self;
 }
 -(NSString *) generateTimestamp{
-	return [NSString stringWithFormat:@"%d",time(NULL)];
+	return [NSString stringWithFormat:@"%ld",time(NULL)];
 }
 -(NSString *) generateNonce{
 	return [NSString stringWithFormat:@"%d",arc4random()%1000000+1000000];

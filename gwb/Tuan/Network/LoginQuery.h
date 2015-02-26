@@ -18,14 +18,20 @@
     //NSString *_loginPwd;
     NSObject *_mytarget;
     
+    NSString * _showTel;
 }
 
 @property(nonatomic, retain)NSString *loginName;
 //@property(nonatomic, retain)NSString *loginPwd;
 @property(nonatomic, assign) NSObject *mytarget;
+@property(nonatomic, assign) NSString *_showTel;
 
 -(void)loginSystem;
 -(void)loginQueryDidFinishUpdate:(id)obj;
 -(void)loginQueryError:(id)obj;
+
+
+-(void)checkTel;
+
 
 @end

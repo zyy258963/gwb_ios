@@ -18,7 +18,10 @@
 
 @property(nonatomic, assign) NSObject *mytarget;
 
--(void)takeTongJi;
+-(void) takeTongJi;
+-(void) takeTongJiDoc:(NSString *) docId;
+-(void) takeTongJiSave:(NSString *) docId;
+-(void) takeTongJiUnSave:(NSString *) favoutiteId;
 -(void)takeTongJiQueryDidFinishUpdate:(NSData *)data obj:(NSObject *)obj;
 -(void)takeTongJiQueryError:(id)obj;
 

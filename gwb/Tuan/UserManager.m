@@ -45,7 +45,6 @@ static UserManager *_sharedManager = nil;
     {
         _sharedManager = [[UserManager alloc] init];
     }
-    
     return _sharedManager;
 }
 

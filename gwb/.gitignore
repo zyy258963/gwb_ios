@@ -1,0 +1,9 @@
+*.o
+Build
+*.d
+
+*.dia
+
+*.o
+
+*.hmap

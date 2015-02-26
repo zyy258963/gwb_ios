@@ -32,7 +32,8 @@
 
 #define NOTIFY_CONFIRMBTNPRESSED			@"confirmBtn_pressed"
 
-#define NETWORK                             @"http://weebo.com.cn/GwbProject/IosAction"
+#define NETWORK                             @"http://localhost:8080/GwbProject/IosAction"
+//#define NETWORK                             @"http://localhost:8080/GwbProject/IosAction"
 
 
 

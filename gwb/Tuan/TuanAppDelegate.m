@@ -28,6 +28,7 @@
         _logQuery.mytarget = self;
     }
     
+    NSLog(@"-----------loginQuery-----m---YES-1111-");
     if ([UserManager sharedManager].userInfo) {
         [_logQuery takeTongJi];
     }
@@ -48,6 +49,8 @@
     LoginViewController *tempWanshan = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
     self.loginNavController = [[UINavigationController alloc] initWithRootViewController:tempWanshan];
     //如果登陆了
+    
+    NSLog(@"-----------TuanAppDelegate-----m---YES--");
     if ([UserManager sharedManager].userInfo) {
         self.loginNavController.view.frame = CGRectMake(700,
                                                                 0,
@@ -73,7 +76,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
-    NSString *dbPath = [documentDirectory stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath = [documentDirectory stringByAppendingPathComponent:@"gwb1.sqlite"];
     [fileManager createFileAtPath:dbPath contents:nil attributes:nil];
     
     FMDatabase *db = [FMDatabase databaseWithPath:dbPath] ;
@@ -132,7 +135,7 @@
 
     NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"GWB.sqlite"];
+    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
     FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
     if (![db2 open]) {

@@ -30,8 +30,10 @@
 #import "DemoTableController.h"
 #import "FMDatabase.h"
 #import "UIView+Toast.h"
+#import "LogQuery.h"
 
 @class ReaderViewController;
+
 
 @protocol ReaderViewControllerDelegate <NSObject>
 
@@ -44,8 +46,11 @@
 @interface ReaderViewController : UIViewController
 {
     FPPopoverController *popover;
+    
+    LogQuery *_logQuery;
 }
 @property (nonatomic, weak, readwrite) id <ReaderViewControllerDelegate> delegate;
+//@property (nonatomic,retain) LogQuery *logQuery;
 
 - (id)initWithReaderDocument:(ReaderDocument *)object;
 

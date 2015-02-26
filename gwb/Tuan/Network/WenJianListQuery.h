@@ -22,7 +22,7 @@
 @property(nonatomic, retain)NSString *keyWord;
 
 @property(nonatomic, readonly)NSMutableArray *listItemArray;
-@property(nonatomic, __unsafe_unretained)NSObject *mytarget;
+@property(nonatomic, retain,__unsafe_unretained)NSObject *mytarget;
 
 
 - (void)getWenJianList;
