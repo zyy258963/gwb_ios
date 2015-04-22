@@ -42,7 +42,6 @@
     
     NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosLoginAction"];
     
-    NSLog(@"---------%@-----222222---------",self.loginName);
     
     NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",@"macAddress",nil];
     NSArray *values = [NSArray arrayWithObjects:@"appLogin",self.loginName,uuid,nil];
@@ -71,10 +70,9 @@
     NSString *message = [head objectForKey:@"msg"];
     
     //NSDictionary *content1 = [content objectForKey:@"content"];
-    
+    NSLog(@"---------%d------",code);
     if (code == 1) 
     {
-        NSLog(@"-----------loginQuery-----m---YES--");
         [UserManager sharedManager].userInfo = YES;
         [UserManager sharedManager].userID = self.loginName;
         [UserManager sharedManager].userName = self.loginName;
@@ -114,7 +112,6 @@
     
     if (code == 1)
     {
-        NSLog(@"-----------loginQuery-----m---NO--");
         [UserManager sharedManager].userInfo = NO;
         [UserManager sharedManager].userID = @"";
         [UserManager sharedManager].userName = @"";
@@ -195,7 +192,6 @@
 {
     [self resetSender];
     
-    NSLog(@"-----------22222222222-----");
     
     NSString *stringData =  [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
@@ -203,7 +199,6 @@
     NSDictionary *content = [json objectForKey:@"content"];
     NSString *showTel = [content objectForKey:@"showTel"];
     
-    NSLog(@"-----------111-----%@----",showTel);
     if ([showTel isEqualToString:@"1"])
     {
        _showTel = @"1";
@@ -221,5 +216,14 @@
     
 }
 
+- (void)loginQueryDidFinishUpdate:(NSData *)data obj:(NSObject *)obj
+{
+    [self resetSender];
+}
+
+- (void)logoutQueryDidFinishUpdate:(NSData *)data obj:(NSObject *)obj
+{
+    [self resetSender];
+}
 
 @end
