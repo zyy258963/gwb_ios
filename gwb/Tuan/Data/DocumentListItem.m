@@ -21,7 +21,6 @@
 @synthesize classId;
 @synthesize createTs;
 @synthesize isAvailable;
-@synthesize bookUrl;
 
 - (id)init
 {
@@ -38,7 +37,6 @@
 
     [bookChapterNum release];
     [bookDesc release];
-    [bookUrl release];
     [bookId release];
     [bookName release];
     [categoryId release];
@@ -57,7 +55,6 @@
         self.bookChapterNum = [aDecoder decodeObjectForKey:@"bookChapterNum"];
         self.bookDesc = [aDecoder decodeObjectForKey:@"bookDesc"];
         self.bookId = [aDecoder decodeObjectForKey:@"bookId"];
-        self.bookUrl = [aDecoder decodeObjectForKey:@"bookUrl"];
         self.bookName = [aDecoder decodeObjectForKey:@"bookName"];
         self.categoryId = [aDecoder decodeObjectForKey:@"categoryId"];
         self.classId = [aDecoder decodeObjectForKey:@"classId"];
@@ -73,7 +70,6 @@
 {
     [aCoder encodeObject:self.bookChapterNum forKey:@"bookChapterNum"];
     [aCoder encodeObject:self.bookDesc forKey:@"bookDesc"];
-    [aCoder encodeObject:self.bookUrl forKey:@"bookUrl"];
     [aCoder encodeObject:self.bookId forKey:@"bookId"];
     [aCoder encodeObject:self.bookName forKey:@"bookName"];
     [aCoder encodeObject:self.categoryId forKey:@"categoryId"];

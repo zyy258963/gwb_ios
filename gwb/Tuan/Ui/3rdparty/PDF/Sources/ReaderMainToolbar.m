@@ -237,18 +237,18 @@
 //				printButton.exclusiveTouch = YES;
                 
                 
-                printButton.frame = CGRectMake(198, BUTTON_Y, EMAIL_BUTTON_WIDTH + 15, BUTTON_HEIGHT);
-                [printButton setTitle:@"目录" forState:UIControlStateNormal];
-                [printButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateNormal];
-                [printButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateHighlighted];
-                [printButton addTarget:self action:@selector(printButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-                [printButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-                [printButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-                printButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.0f];
-                printButton.autoresizingMask = UIViewAutoresizingNone;
-                printButton.exclusiveTouch = YES;
+//                printButton.frame = CGRectMake(198, BUTTON_Y, EMAIL_BUTTON_WIDTH + 15, BUTTON_HEIGHT);
+//                [printButton setTitle:@"目录" forState:UIControlStateNormal];
+//                [printButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateNormal];
+//                [printButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateHighlighted];
+//                [printButton addTarget:self action:@selector(printButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+//                [printButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+//                [printButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+//                printButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.0f];
+//                printButton.autoresizingMask = UIViewAutoresizingNone;
+//                printButton.exclusiveTouch = YES;
 
-				[self addSubview:printButton]; titleWidth -= (PRINT_BUTTON_WIDTH + BUTTON_SPACE);
+//				[self addSubview:printButton]; titleWidth -= (PRINT_BUTTON_WIDTH + BUTTON_SPACE);
 			}
 		}
 

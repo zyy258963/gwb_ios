@@ -16,7 +16,6 @@
     NSString *bookChapterNum;
     NSString *bookDesc;
     NSString *bookId;
-    NSString *bookUrl;
     NSString *bookName;
     NSString *categoryId;
     NSString *classId;
@@ -28,7 +27,6 @@
 @property(nonatomic, retain)NSString *bookChapterNum;
 @property(nonatomic, retain)NSString *bookDesc;
 @property(nonatomic, retain)NSString *bookId;
-@property(nonatomic, retain)NSString *bookUrl;
 @property(nonatomic, retain)NSString *bookName;
 @property(nonatomic, retain)NSString *categoryId;
 @property(nonatomic, retain)NSString *classId;

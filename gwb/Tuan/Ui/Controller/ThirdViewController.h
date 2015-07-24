@@ -12,7 +12,7 @@
 #import "WenJianListQuery.h"
 #import "Reachability.h"
 #import "SearchListQuery.h"
-#import "FourthViewController.h"
+#import "ChapterViewController.h"
 #import "FMDatabase.h"
 
 @interface ThirdViewController : BaseViewController <UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>

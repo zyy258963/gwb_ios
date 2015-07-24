@@ -114,10 +114,10 @@ enum AsyncSocketFlags
 - (UInt16)connectedPortFromNativeSocket6:(CFSocketNativeHandle)theNativeSocket;
 - (UInt16)connectedPortFromCFSocket4:(CFSocketRef)socket;
 - (UInt16)connectedPortFromCFSocket6:(CFSocketRef)socket;
-- (NSString *)localHostFromNativeSocket4:(CFSocketNativeHandle)theNativeSocket;
-- (NSString *)localHostFromNativeSocket6:(CFSocketNativeHandle)theNativeSocket;
-- (NSString *)localHostFromCFSocket4:(CFSocketRef)socket;
-- (NSString *)localHostFromCFSocket6:(CFSocketRef)socket;
+- (NSString *)localhostFromNativeSocket4:(CFSocketNativeHandle)theNativeSocket;
+- (NSString *)localhostFromNativeSocket6:(CFSocketNativeHandle)theNativeSocket;
+- (NSString *)localhostFromCFSocket4:(CFSocketRef)socket;
+- (NSString *)localhostFromCFSocket6:(CFSocketRef)socket;
 - (UInt16)localPortFromNativeSocket4:(CFSocketNativeHandle)theNativeSocket;
 - (UInt16)localPortFromNativeSocket6:(CFSocketNativeHandle)theNativeSocket;
 - (UInt16)localPortFromCFSocket4:(CFSocketRef)socket;
@@ -2660,21 +2660,21 @@ Failed:
 	return 0;
 }
 
-- (NSString *)localHost
+- (NSString *)localhost
 {
 #if DEBUG_THREAD_SAFETY
 	[self checkForThreadSafety];
 #endif
 	
 	if(theSocket4)
-		return [self localHostFromCFSocket4:theSocket4];
+		return [self localhostFromCFSocket4:theSocket4];
 	if(theSocket6)
-		return [self localHostFromCFSocket6:theSocket6];
+		return [self localhostFromCFSocket6:theSocket6];
 	
 	if(theNativeSocket4 > 0)
-		return [self localHostFromNativeSocket4:theNativeSocket4];
+		return [self localhostFromNativeSocket4:theNativeSocket4];
 	if(theNativeSocket6 > 0)
-		return [self localHostFromNativeSocket6:theNativeSocket6];
+		return [self localhostFromNativeSocket6:theNativeSocket6];
 	
 	return nil;
 }
@@ -2738,22 +2738,22 @@ Failed:
 	return 0;
 }
 
-- (NSString *)localHost4
+- (NSString *)localhost4
 {
 	if(theSocket4)
-		return [self localHostFromCFSocket4:theSocket4];
+		return [self localhostFromCFSocket4:theSocket4];
 	if(theNativeSocket4 > 0)
-		return [self localHostFromNativeSocket4:theNativeSocket4];
+		return [self localhostFromNativeSocket4:theNativeSocket4];
 	
 	return nil;
 }
 
-- (NSString *)localHost6
+- (NSString *)localhost6
 {
 	if(theSocket6)
-		return [self localHostFromCFSocket6:theSocket6];
+		return [self localhostFromCFSocket6:theSocket6];
 	if(theNativeSocket6 > 0)
-		return [self localHostFromNativeSocket6:theNativeSocket6];
+		return [self localhostFromNativeSocket6:theNativeSocket6];
 	
 	return nil;
 }
@@ -2890,7 +2890,7 @@ Failed:
 	return peerport;
 }
 
-- (NSString *)localHostFromNativeSocket4:(CFSocketNativeHandle)theNativeSocket
+- (NSString *)localhostFromNativeSocket4:(CFSocketNativeHandle)theNativeSocket
 {
 	struct sockaddr_in sockaddr4;
 	socklen_t sockaddr4len = sizeof(sockaddr4);
@@ -2902,7 +2902,7 @@ Failed:
 	return [self hostFromAddress4:&sockaddr4];
 }
 
-- (NSString *)localHostFromNativeSocket6:(CFSocketNativeHandle)theNativeSocket
+- (NSString *)localhostFromNativeSocket6:(CFSocketNativeHandle)theNativeSocket
 {
 	struct sockaddr_in6 sockaddr6;
 	socklen_t sockaddr6len = sizeof(sockaddr6);
@@ -2914,7 +2914,7 @@ Failed:
 	return [self hostFromAddress6:&sockaddr6];
 }
 
-- (NSString *)localHostFromCFSocket4:(CFSocketRef)theSocket
+- (NSString *)localhostFromCFSocket4:(CFSocketRef)theSocket
 {
 	CFDataRef selfaddr;
 	NSString *selfstr = nil;
@@ -2930,7 +2930,7 @@ Failed:
 	return selfstr;
 }
 
-- (NSString *)localHostFromCFSocket6:(CFSocketRef)theSocket
+- (NSString *)localhostFromCFSocket6:(CFSocketRef)theSocket
 {
 	CFDataRef selfaddr;
 	NSString *selfstr = nil;
@@ -3231,20 +3231,20 @@ Failed:
 		if (is4 && is6)
 		{
 			selfstr = [NSString stringWithFormat: @"%@/%@ %u",
-					   [self localHost4],
-					   [self localHost6],
+					   [self localhost4],
+					   [self localhost6],
 					   [self localPort]];
 		}
 		else if (is4)
 		{
 			selfstr = [NSString stringWithFormat: @"%@ %u",
-					   [self localHost4],
+					   [self localhost4],
 					   [self localPort4]];
 		}
 		else
 		{
 			selfstr = [NSString stringWithFormat: @"%@ %u",
-					   [self localHost6],
+					   [self localhost6],
 					   [self localPort6]];
 		}
 	}

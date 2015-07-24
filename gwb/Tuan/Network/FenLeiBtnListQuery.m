@@ -38,16 +38,14 @@
 - (void)getFenLeiBtnList
 {
     [self cancelRequest];
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", NETWORK];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", NETWORK_LIST_CATEGORY];
     NSString *uuid =  [SFHFKeychainUtils getPasswordForUsername:@"UUID" andServiceName:@"DAKA" error:nil];
 
-    NSMutableArray *keys = [NSMutableArray arrayWithObjects:@"type",
-                                                            @"categoryId",
-                                                            @"telephone",
-                                                            @"macAddress",
+    NSMutableArray *keys = [NSMutableArray arrayWithObjects:@"parentid",
+                                                            @"tele",
+                                                            @"mac",
                                                             nil];
-    NSMutableArray *values = [NSMutableArray arrayWithObjects:@"listClass",
-                                                                self.cId,
+    NSMutableArray *values = [NSMutableArray arrayWithObjects:self.cId,
                                                                 [UserManager sharedManager].userID,
                                                                 uuid,
                                                                 nil];
@@ -83,9 +81,9 @@
         
         for (int q = 0; q < content2.count; q ++) {
             SubCategoryItem *item2 = [[SubCategoryItem alloc] init];
-            item2.classId = [[content2 objectAtIndex:q] objectForKey:@"classId"];
-            item2.categoryId = [[content2 objectAtIndex:q] objectForKey:@"categoryId"];
-            item2.className = [[content2 objectAtIndex:q] objectForKey:@"className"];
+            item2.classId = [[content2 objectAtIndex:q] objectForKey:@"id"];
+            item2.categoryId = [[content2 objectAtIndex:q] objectForKey:@"parentid"];
+            item2.className = [[content2 objectAtIndex:q] objectForKey:@"name"];
             [_listItemArray addObject:item2];
             [item2 release];
         }

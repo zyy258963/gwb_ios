@@ -328,14 +328,14 @@ typedef enum AsyncSocketError AsyncSocketError;
 - (NSString *)connectedHost;
 - (UInt16)connectedPort;
 
-- (NSString *)localHost;
+- (NSString *)localhost;
 - (UInt16)localPort;
 
 /**
  * Returns the local or remote address to which this socket is connected,
  * specified as a sockaddr structure wrapped in a NSData object.
  * 
- * See also the connectedHost, connectedPort, localHost and localPort methods.
+ * See also the connectedHost, connectedPort, localhost and localPort methods.
 **/
 - (NSData *)connectedAddress;
 - (NSData *)localAddress;

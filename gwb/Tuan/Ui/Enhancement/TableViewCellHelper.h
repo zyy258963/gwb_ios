@@ -11,6 +11,7 @@
 #import "UIImageViewActive.h"
 #import "UILabel+VerticalAlign.h"
 #import "DocumentListItem.h"
+#import "ChapterListItem.h"
 #import "MuLuItem.h"
 
 @interface TableViewCellHelper : NSObject
@@ -18,6 +19,7 @@
     NSString *operator;
 }
 
++ (UITableViewCell *)createChapterListCell:(id)ower view:(UITableView *)view appWithItem:(ChapterListItem *)app;
 + (UITableViewCell *)createDocumentListCell:(id)ower view:(UITableView *)view appWithItem:(DocumentListItem *)app;
 + (UITableViewCell *)createMLCell:(id)ower view:(UITableView *)view appWithMLItem:(MuLuItem *)app;
 + (UITableViewCell *)createFirstListCell:(id)ower view:(UITableView *)view appWithTitle:(NSString *)app appWithLine:(int)line;

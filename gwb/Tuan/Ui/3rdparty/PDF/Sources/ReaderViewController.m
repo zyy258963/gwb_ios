@@ -853,27 +853,45 @@
             //没收藏
             //isShouCang = NO;
             
-            if (tempIndex >= MAX_SAVE) {
-                //[OMGToast showWithText:@"您已经收藏3篇文档,请删除多余文档后再收藏!" bottomOffset:20 duration:140];
-                [self.view makeToast:@"您已经收藏1篇文档,请删除多余文档后再收藏!"
-                            duration:2.0
-                            position:@"bottom"
-                               title:nil];
-            }else{
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"为了节省您的手机空间，‘我的常用文档’内只能存放1篇文档，请慎重选择！" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"继续",nil];
-                alertView.tag = 101;
-                [alertView show];
-                //[alertView release];
-            }
+            
+//            不管收藏没收藏，都提示不可用
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"对不起，您的权限不支持收藏功能!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            alert.tag = 999;
+            [alert show];
+            
+            
+//            [self.view makeToast:@"对不起，您的权限不支持收藏功能!"
+//                        duration:2.0
+//                        position:@"bottom"
+//                           title:nil];
+            
+//            if (tempIndex >= MAX_SAVE) {
+//                //[OMGToast showWithText:@"您已经收藏3篇文档,请删除多余文档后再收藏!" bottomOffset:20 duration:140];
+//                [self.view makeToast:@"您已经收藏1篇文档,请删除多余文档后再收藏!"
+//                            duration:2.0
+//                            position:@"bottom"
+//                               title:nil];
+//            }else{
+//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"为了节省您的手机空间，‘我的常用文档’内只能存放1篇文档，请慎重选择！" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"继续",nil];
+//                alertView.tag = 101;
+//                [alertView show];
+//                //[alertView release];
+//            }
             
         }else{
             //已经收藏
             //isShouCang = YES;
             
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您确认取消收藏本篇文章？" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"确认",nil];
-            alertView.tag = 102;
-            [alertView show];
-            //[alertView release];
+            
+//            [self.view makeToast:@"对不起，您的权限不支持收藏功能!"
+//                        duration:5.0
+//                        position:@"bottom"
+//                           title:nil];
+
+            
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您确认取消收藏本篇文章？" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"确认",nil];
+//            alertView.tag = 102;
+//            [alertView show];
         }
     }else{
         

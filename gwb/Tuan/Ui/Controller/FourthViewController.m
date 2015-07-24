@@ -24,8 +24,11 @@
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withUrl:(NSString *)itemUrl withId:(NSString *)itemId withTitle:(NSString *)itemTitle{
+    NSLog(@"---======%@======%@======%@======----",itemUrl,itemId,itemTitle);
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        myUrl = [NSString stringWithFormat:@"%@%@",@"http://117.79.84.185:8080/FileUpload/upload/books/",itemUrl];
+        
+        NSLog(@"---======%@======%@===211111===%@======----",itemUrl,itemId,itemTitle);
+        myUrl = [NSString stringWithFormat:@"%@",itemUrl];
         myId = itemId;
         [myId retain];
         myTitle = itemTitle;
@@ -263,39 +266,49 @@
 }
 
 - (IBAction)shouCangBtn:(id)sender {
-    NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory2 = [paths2 objectAtIndex:0];
-    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
     
-    FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
-    if (![db2 open]) {
-        return ;
-    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"对不起，您的权限不支持收藏功能!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    alert.tag = 999;
+    [alert show];
     
-    NSString *sql2 = [NSString stringWithFormat:@"select * from BOOKS where ID = %@", myId];
-    FMResultSet *fmSet2 = [db2 executeQuery:sql2];
-    if ([fmSet2 next]) {
-        if ([[fmSet2 stringForColumn:@"SHOUCANG"] isEqualToString:@"0"]) {
-            //没收藏
-            isShouCang = NO;
-            
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您确认收藏本篇文章？" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"确认",nil];
-            alertView.tag = 101;
-            [alertView show];
-            //[alertView release];
-            
-        }else{
-            //已经收藏
-            isShouCang = YES;
-            
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您确认取消收藏本篇文章？" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"确认",nil];
-            alertView.tag = 102;
-            [alertView show];
-            //[alertView release];
-        }
-    }else{
-        
-    }
+//    [self.view makeToast:@"对不起，您的权限不支持收藏功能!"
+//                duration:2.0
+//                position:@"bottom"
+//                   title:nil];
+    
+//    NSArray *paths2 = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentDirectory2 = [paths2 objectAtIndex:0];
+//    NSString *dbPath2 = [documentDirectory2 stringByAppendingPathComponent:@"gwb1.sqlite"];
+//    
+//    FMDatabase *db2 = [FMDatabase databaseWithPath:dbPath2] ;
+//    if (![db2 open]) {
+//        return ;
+//    }
+//    
+//    NSString *sql2 = [NSString stringWithFormat:@"select * from BOOKS where ID = %@", myId];
+//    FMResultSet *fmSet2 = [db2 executeQuery:sql2];
+//    if ([fmSet2 next]) {
+//        if ([[fmSet2 stringForColumn:@"SHOUCANG"] isEqualToString:@"0"]) {
+//            //没收藏
+//            isShouCang = NO;
+//            
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您确认收藏本篇文章？" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"确认",nil];
+//            alertView.tag = 101;
+//            [alertView show];
+//            //[alertView release];
+//            
+//        }else{
+//            //已经收藏
+//            isShouCang = YES;
+//            
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您确认取消收藏本篇文章？" message:nil delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"确认",nil];
+//            alertView.tag = 102;
+//            [alertView show];
+//            //[alertView release];
+//        }
+//    }else{
+//        
+//    }
     
 }
 

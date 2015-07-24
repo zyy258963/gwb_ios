@@ -32,9 +32,17 @@
 
 #define NOTIFY_CONFIRMBTNPRESSED			@"confirmBtn_pressed"
 
-#define NETWORK                             @"http://localhost:8080/GwbProject/IosAction"
-//#define NETWORK                             @"http://localhost:8080/GwbProject/IosAction"
+#define NETWORK                             @"http://www.weebo.com.cn/gwb1/ios"
+//#define NETWORK                             @"http://www.weebo.com.cn/gwb1/ios"
 
+
+#define NETWORK_LIST_CATEGORY                @"http://www.weebo.com.cn/gwb1/ios/listCategory"
+
+#define NETWORK_LIST_BOOK                    @"http://www.weebo.com.cn/gwb1/ios/listBook"
+
+#define NETWORK_LIST_CHAPTER                 @"http://www.weebo.com.cn/gwb1/ios/listChapter"
+
+#define NETWORK_SEARCH_BOOK                  @"http://www.weebo.com.cn/gwb1/ios/searchBook"
 
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)

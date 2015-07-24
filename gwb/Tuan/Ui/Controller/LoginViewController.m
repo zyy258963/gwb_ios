@@ -45,7 +45,7 @@
     
 //    查询需要现实什么提示语
     
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/GwbProject/IosLoginAction?type=showTel"];
+    NSURL *url = [NSURL URLWithString:@"http://www.weebo.com.cn/gwb1/ios/showTel"];
     NSURLRequest *request = [NSURLRequest requestWithURL: url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3.0f];
     NSURLResponse *response = nil;
     NSError *error = nil;

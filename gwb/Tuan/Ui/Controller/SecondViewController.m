@@ -141,8 +141,32 @@
     [self.navigationController pushViewController:contentView animated:YES];
     [contentView release];
     
-    
 }
+
+////进入第四页
+//- (IBAction)gotoPush:(id)sender {
+//
+//    UIButton *btn = (UIButton* )sender;
+//    int tagBtn = btn.tag;
+//
+//    SubCategoryItem *item2 = (SubCategoryItem* )[items objectAtIndex:tagBtn];
+//    NSArray *listItems = [myTitle componentsSeparatedByString:@"-"];
+//
+//    NSString *temp = @"";
+//    if (listItems.count > 1) {
+//        temp = [NSString stringWithFormat:@"%@-%@",[listItems objectAtIndex:1],item2.className];
+//    }else{
+//        temp = item2.className;
+//    }
+//
+//    //进入second
+//    ThirdViewController *contentView = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil withDocId:[NSString stringWithFormat:@"%d",[item2.classId intValue]] withDocName:temp withKeyWord:@""];
+//    [contentView setHidesBottomBarWhenPushed:YES];
+//    [self.navigationController pushViewController:contentView animated:YES];
+//    [contentView release];
+//
+//}
+
 
 - (void)getFenLeiBtnListQueryError:(id)obj
 {

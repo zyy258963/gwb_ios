@@ -23,8 +23,8 @@
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *nameText;
-@property (nonatomic, retain) IBOutlet UIImageView *bgImg;
 @property (nonatomic, retain) IBOutlet UILabel *labelTel;
+@property (nonatomic, retain) IBOutlet UIImageView *bgImg;
 
 - (void)setLoadingUI:(BOOL)isLoading;
 

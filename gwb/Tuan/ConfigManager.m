@@ -13,6 +13,7 @@
 @synthesize chooseMulu;
 @synthesize cangId;
 @synthesize chooseBook;
+@synthesize chooseChapter;
 
 
 static ConfigManager *_sharedManager = nil;
@@ -47,6 +48,7 @@ static ConfigManager *_sharedManager = nil;
     [chooseMulu release];
     [cangId release];
     [chooseBook release];
+    [chooseChapter release];
     
     [super dealloc];
 }

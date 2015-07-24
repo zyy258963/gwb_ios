@@ -131,4 +131,42 @@
 }
 
 
+//文件列表
++ (UITableViewCell *)createChapterListCell:(id)ower view:(UITableView *)view appWithItem:(ChapterListItem *)app
+{
+    
+    static NSString *pListCellIdentifier = @"ChapterListCellIdentifier";
+    
+    UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:pListCellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nibTableCells = [[NSBundle mainBundle] loadNibNamed:@"ChapterListCell" owner:ower options:nil];
+        cell = [nibTableCells objectAtIndex:0];
+        
+        // set selected color
+        UIView *bgColorView = [[UIView alloc] init];
+        [bgColorView setBackgroundColor:[UIColor colorWithRed:(226.0 / 255)
+                                                        green:(226.0 / 255)
+                                                         blue:(226.0 / 255)
+                                                        alpha:1.0]];
+        [cell setBackgroundView:bgColorView];
+        [bgColorView release];
+        
+        // set selected color
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+    }
+    
+    //标题
+    UILabel *title = (UILabel *)[cell viewWithTag:101];
+    title.text = app.chapterName;
+    
+    return cell;
+    
+}
+
+
+
 @end

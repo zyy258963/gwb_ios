@@ -17,11 +17,13 @@
     NSString *chooseMulu;
     NSString *cangId;
     NSString *chooseBook;
+    NSString *chooseChapter;
 }
 @property(nonatomic,retain)NSMutableArray *muluArray;
 @property(nonatomic,retain)NSString *chooseMulu;
 @property(nonatomic,retain)NSString *cangId;
 @property(nonatomic,retain)NSString *chooseBook;
+@property(nonatomic,retain)NSString *chooseChapter;
 
 + (ConfigManager *)sharedManager;
 

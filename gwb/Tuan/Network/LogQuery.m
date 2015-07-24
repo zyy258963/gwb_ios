@@ -26,10 +26,10 @@
 {
     [self cancelRequest];
     
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosLoginAction"];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://www.weebo.com.cn/gwb1/ios/logInfo"];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",nil];
-    NSArray *values = [NSArray arrayWithObjects:@"logInfo",[UserManager sharedManager].userID,nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"tele",nil];
+    NSArray *values = [NSArray arrayWithObjects:[UserManager sharedManager].userID,nil];
     
     self.sender= [RequestSender requestSenderWithURL:baseUrl
                                              usePost:1
@@ -47,10 +47,10 @@
 {
     [self cancelRequest];
     
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosLoginAction"];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://www.weebo.com.cn/gwb1/ios/logOpenInfo"];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",@"keywords",nil];
-    NSArray *values = [NSArray arrayWithObjects:@"logOpenInfo",[UserManager sharedManager].userID,docName,nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"tele",@"keywords",nil];
+    NSArray *values = [NSArray arrayWithObjects:[UserManager sharedManager].userID,docName,nil];
     
     self.sender= [RequestSender requestSenderWithURL:baseUrl
                                              usePost:1
@@ -81,10 +81,10 @@
     }
     
     
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosAction"];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://www.weebo.com.cn/gwb1/ios/addFavourite"];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",@"macAddress",@"userId",@"bookId",nil];
-    NSArray *values = [NSArray arrayWithObjects:@"addFavourite",[UserManager sharedManager].userID,uuid,[UserManager sharedManager].userID,docId,nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"tele",@"mac",@"userId",@"bookId",nil];
+    NSArray *values = [NSArray arrayWithObjects:[UserManager sharedManager].userID,uuid,[UserManager sharedManager].userID,docId,nil];
     
     self.sender= [RequestSender requestSenderWithURL:baseUrl
                                              usePost:1
@@ -116,10 +116,10 @@
     }
     
     
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosAction"];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://www.weebo.com.cn/gwb1/ios/addFavourite"];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",@"macAddress",@"bookId",nil];
-    NSArray *values = [NSArray arrayWithObjects:@"addFavourite",[UserManager sharedManager].userID,uuid,favoutiteId,nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"tele",@"mac",@"bookId",nil];
+    NSArray *values = [NSArray arrayWithObjects:[UserManager sharedManager].userID,uuid,favoutiteId,nil];
     
     self.sender= [RequestSender requestSenderWithURL:baseUrl
                                              usePost:1
