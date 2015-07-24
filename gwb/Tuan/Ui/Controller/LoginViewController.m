@@ -44,26 +44,39 @@
     }
     
 //    查询需要现实什么提示语
+//    query = [[LoginQuery alloc] init];
+//    query.mytarget = self;
+//    [query checkTel];
+//    NSLog(@"-----%@---1--",query._showTel);
+//    if([query._showTel isEqualToString:@"1"]){
+//        self.labelTel.text = @"请输入您的手机号码";
+//        self.nameText.placeholder = @"请输入您的手机号码";
+//    }else{
+//        self.labelTel.text = @"请输入您的用户名";
+//        self.nameText.placeholder = @"请输入您的用户名，首次输入即为注册";
+//    }
+//    
+//    NSLog(@"-----%@---2--",query._showTel);
     
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/GwbProject/IosLoginAction?type=showTel"];
-    NSURLRequest *request = [NSURLRequest requestWithURL: url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3.0f];
-    NSURLResponse *response = nil;
-    NSError *error = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    NSString *stringData =  [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
-    NSDictionary *jsonDict = (NSDictionary *)[stringData JSONValue];
-    NSDictionary *content = [jsonDict objectForKey:@"content"];
-    NSString *showTel = [content objectForKey:@"showTel"];
-    
-    if([showTel isEqualToString:@"1"]){
-        self.labelTel.text = @"请输入您的手机号码";
-        self.nameText.placeholder = @"请输入您的手机号码";
-    }else{
-        self.labelTel.text = @"请输入您的用户名";
-        self.nameText.placeholder = @"请输入您的用户名，首次输入即为注册";
-    }
+//    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/GwbProject/IosLoginAction?type=showTel"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL: url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3.0f];
+//    NSURLResponse *response = nil;
+//    NSError *error = nil;
+//    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+//    
+//    NSString *stringData =  [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    
+//    NSDictionary *jsonDict = (NSDictionary *)[stringData JSONValue];
+//    NSDictionary *content = [jsonDict objectForKey:@"content"];
+//    NSString *showTel = [content objectForKey:@"showTel"];
+//    
+//    if([showTel isEqualToString:@"1"]){
+//        self.labelTel.text = @"请输入您的手机号码";
+//        self.nameText.placeholder = @"请输入您的手机号码";
+//    }else{
+//        self.labelTel.text = @"请输入您的用户名";
+//        self.nameText.placeholder = @"请输入您的用户名，首次输入即为注册";
+//    }
     
 	[self addBgBackgroundColor];
     

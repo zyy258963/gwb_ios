@@ -42,8 +42,10 @@
     }
     
     if ([UserManager sharedManager].userInfo) {
+        NSLog(@"%@",@"shareManager ---  中用户信息 不为空");
         [self loginNotify:nil];
     }else{
+        NSLog(@"%@",@"shareManager ---  中用户信息 ＝＝＝＝＝＝空");
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(loginNotify:)
                                                      name:@"loginonotify"
@@ -54,6 +56,8 @@
 
 - (void)loginNotify:(NSNotification *)notification {
     if ([UserManager sharedManager].userInfo ) {
+        
+        NSLog(@"=============22222----");
         
         query = [[WenJianBtnListQuery alloc] init];
         query.mytarget = self;

@@ -28,6 +28,7 @@
         _logQuery.mytarget = self;
     }
     
+    NSLog(@"-----------loginQuery-----m---YES-1111-");
     if ([UserManager sharedManager].userInfo) {
         [_logQuery takeTongJi];
     }
@@ -49,6 +50,7 @@
     self.loginNavController = [[UINavigationController alloc] initWithRootViewController:tempWanshan];
     //如果登陆了
     
+    NSLog(@"-----------TuanAppDelegate-----m---YES--");
     if ([UserManager sharedManager].userInfo) {
         self.loginNavController.view.frame = CGRectMake(700,
                                                                 0,

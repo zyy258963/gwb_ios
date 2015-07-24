@@ -95,6 +95,7 @@
         }
     }else if (code == 2){
         
+        NSLog(@"-----------searchListQuery-----m---NO--");
         [UserManager sharedManager].userInfo = NO;
         [UserManager sharedManager].userID = @"";
         [UserManager sharedManager].userName = @"";
