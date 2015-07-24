@@ -30,7 +30,7 @@
 		<key>1e08ab6f-ef13-9d40-9ec7-e23f4c2e16a1++915</key>
 		<string>../../Tuan/Ui/3rdparty/FMDB</string>
 		<key>96150B2E9B175D31FD13A904068B031436D6C3A2</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
@@ -55,7 +55,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>96150B2E9B175D31FD13A904068B031436D6C3A2</string>
 			<key>IDESourceControlWCCName</key>
-			<string>..</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
