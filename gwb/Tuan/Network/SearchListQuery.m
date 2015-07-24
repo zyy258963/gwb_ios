@@ -39,14 +39,16 @@
 - (void)getSearchList
 {
     [self cancelRequest];
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", NETWORK_SEARCH_BOOK];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", NETWORK];
     NSString *uuid =  [SFHFKeychainUtils getPasswordForUsername:@"UUID" andServiceName:@"DAKA" error:nil];
 
-    NSMutableArray *keys = [NSMutableArray arrayWithObjects:@"tele",
-                                                            @"mac",
-                                                            @"name",
+    NSMutableArray *keys = [NSMutableArray arrayWithObjects:@"type",
+                                                            @"telephone",
+                                                            @"macAddress",
+                                                            @"keywords",
                                                             nil];
-    NSMutableArray *values = [NSMutableArray arrayWithObjects:[UserManager sharedManager].userID,
+    NSMutableArray *values = [NSMutableArray arrayWithObjects:@"searchBook",
+                                                                [UserManager sharedManager].userID,
                                                                 uuid,
                                                                 self.keyWord,
                                                                 nil];
@@ -81,9 +83,9 @@
         
         for (int q = 0; q < content2.count; q ++) {
             DocumentListItem *item2 = [[DocumentListItem alloc] init];
-            item2.bookId = [[content2 objectAtIndex:q] objectForKey:@"id"];
-            item2.bookName = [[content2 objectAtIndex:q] objectForKey:@"name"];
-//            item2.bookUrl = [[content2 objectAtIndex:q] objectForKey:@"bookUrl"];
+            item2.bookId = [[content2 objectAtIndex:q] objectForKey:@"bookId"];
+            item2.bookName = [[content2 objectAtIndex:q] objectForKey:@"bookName"];
+            item2.bookUrl = [[content2 objectAtIndex:q] objectForKey:@"bookUrl"];
             [_listItemArray addObject:item2];
             [item2 release];
         }

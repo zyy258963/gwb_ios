@@ -1,7 +1,0 @@
-framework module MultipeerConnectivity [system] {
-  umbrella "Headers"
-     
-  export *
-  module * { export * }
-}
-

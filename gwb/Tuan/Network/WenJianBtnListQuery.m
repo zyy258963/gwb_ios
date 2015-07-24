@@ -37,16 +37,18 @@
 - (void)getWenJianBtnList
 {
     [self cancelRequest];
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", NETWORK_LIST_CATEGORY];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", NETWORK];
     
     NSString *uuid =  [SFHFKeychainUtils getPasswordForUsername:@"UUID" andServiceName:@"DAKA" error:nil];
 
-    NSMutableArray *keys = [NSMutableArray arrayWithObjects:@"tele",
-                                                            @"mac",
+    NSMutableArray *keys = [NSMutableArray arrayWithObjects:@"type",
+                                                            @"telephone",
+                                                            @"macAddress",
                                                             nil];
     
     
-    NSMutableArray *values = [NSMutableArray arrayWithObjects:[UserManager sharedManager].userID,
+    NSMutableArray *values = [NSMutableArray arrayWithObjects:@"listCategory",
+                                                                [UserManager sharedManager].userID,
                                                                 uuid,
                                                                 nil];
     
@@ -81,8 +83,8 @@
         
         for (int q = 0; q < content2.count; q ++) {
             CategoryItem *item2 = [[CategoryItem alloc] init];
-            item2.categoryId = [[content2 objectAtIndex:q] objectForKey:@"id"];
-            item2.categoryName = [[content2 objectAtIndex:q] objectForKey:@"name"];
+            item2.categoryId = [[content2 objectAtIndex:q] objectForKey:@"categoryId"];
+            item2.categoryName = [[content2 objectAtIndex:q] objectForKey:@"categoryName"];
             [_listItemArray addObject:item2];
             [item2 release];
         }

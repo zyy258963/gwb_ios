@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/Enhancement/TableViewCellHelper.m \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/Enhancement/TableViewCellHelper.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Data/BaseItem.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Xml/XMLNode.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/3rdparty/SDWebImage/UIImageViewActive.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/3rdparty/SDWebImage/SDWebImageManagerDelegate.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/Enhancement/UILabel+VerticalAlign.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Data/DocumentListItem.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Xml/XMLParser.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Data/MuLuItem.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Util/StringHTMLCategory.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/Enhancement/CustomImageView.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/3rdparty/SDWebImage/UIImageView+WebCache.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/3rdparty/SDWebImage/SDWebImageCompat.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/3rdparty/SDWebImage/SDWebImageManager.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/3rdparty/SDWebImage/SDWebImageDownloaderDelegate.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Ui/3rdparty/SDWebImage/SDImageCacheDelegate.h \
+  /Users/ll/Documents/github/gwb_ios/ios_gwb/Tuan/Util/StringUtil.h

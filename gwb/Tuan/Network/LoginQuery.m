@@ -40,11 +40,11 @@
         uuid =  [SFHFKeychainUtils getPasswordForUsername:@"UUID" andServiceName:@"DAKA" error:nil];
     }
     
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://www.weebo.com.cn/gwb1/ios/login"];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosLoginAction"];
     
     
-    NSArray *keys = [NSArray arrayWithObjects:@"tele",@"mac",nil];
-    NSArray *values = [NSArray arrayWithObjects:self.loginName,uuid,nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",@"macAddress",nil];
+    NSArray *values = [NSArray arrayWithObjects:@"appLogin",self.loginName,uuid,nil];
     
     self.sender= [RequestSender requestSenderWithURL:baseUrl
                                              usePost:2
@@ -69,25 +69,18 @@
     int code = [[head objectForKey:@"code"] intValue];
     NSString *message = [head objectForKey:@"msg"];
     
-    NSDictionary *content1 = [content objectForKey:@"content"];
-    NSString *contMsg = [content1 objectForKey:@"msg"];
+    //NSDictionary *content1 = [content objectForKey:@"content"];
     NSLog(@"---------%d------",code);
     if (code == 1) 
     {
-        if ([contMsg isEqualToString:@"nomatch"] ) {
-            if (_mytarget && [_mytarget respondsToSelector:@selector(loginQueryError:)]) {
-                [_mytarget performSelector:@selector(loginQueryError:) withObject:message];
-            }
-        }else{
-            [UserManager sharedManager].userInfo = YES;
-            [UserManager sharedManager].userID = self.loginName;
-            [UserManager sharedManager].userName = self.loginName;
-            
-            if (_mytarget && [_mytarget respondsToSelector:@selector(loginQueryDidFinishUpdate:)]) {
-                [_mytarget performSelector:@selector(loginQueryDidFinishUpdate:) withObject:nil];
-            }
-
+        [UserManager sharedManager].userInfo = YES;
+        [UserManager sharedManager].userID = self.loginName;
+        [UserManager sharedManager].userName = self.loginName;
+        
+        if (_mytarget && [_mytarget respondsToSelector:@selector(loginQueryDidFinishUpdate:)]) {
+            [_mytarget performSelector:@selector(loginQueryDidFinishUpdate:) withObject:nil];
         }
+        
     }else {
         if (_mytarget && [_mytarget respondsToSelector:@selector(loginQueryError:)]) {
             [_mytarget performSelector:@selector(loginQueryError:) withObject:message];
@@ -98,8 +91,6 @@
 
 - (void)loginSystemErrorWithObj:(NSObject *)obj
 {
-    NSLog(@"---------%d---出错了---");
-
     [self resetSender];
     
     if (_mytarget && [_mytarget respondsToSelector:@selector(loginQueryError:)]) {
@@ -180,10 +171,10 @@
 {
     [self cancelRequest];
     
-    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://www.weebo.com.cn/gwb1/ios/showTele"];
+    NSString *baseUrl = [NSString stringWithFormat:@"%@", @"http://localhost:8080/GwbProject/IosLoginAction"];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"tele",nil];
-    NSArray *values = [NSArray arrayWithObjects:self.loginName,nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"type",@"telephone",nil];
+    NSArray *values = [NSArray arrayWithObjects:@"showTel",self.loginName,nil];
     
     self.sender= [RequestSender requestSenderWithURL:baseUrl
                                              usePost:2

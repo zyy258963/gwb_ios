@@ -102,6 +102,7 @@
             DocumentListItem *temp = [[DocumentListItem alloc] init];
             temp.bookId = [fmSet3 stringForColumn:@"ID"];
             temp.bookName = [fmSet3 stringForColumn:@"NAME"];
+            temp.bookUrl = [fmSet3 stringForColumn:@"URL"];
             [items addObject:temp];
             [temp release];
         
@@ -148,6 +149,7 @@
             DocumentListItem *temp = [[DocumentListItem alloc] init];
             temp.bookId = [fmSet3 stringForColumn:@"ID"];
             temp.bookName = [fmSet3 stringForColumn:@"NAME"];
+            temp.bookUrl = [fmSet3 stringForColumn:@"URL"];
             [items addObject:temp];
             [temp release];
         }
@@ -162,7 +164,7 @@
         [self setLoadingUI:NO];
         
         if (items.count == 0) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库,我们会尽快为您录入。请电客服：18601024316 联系或给QQ号：910166361 联系留言，谢谢！" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库,我们会尽快为您录入。请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
             alert.tag = 999;
             [alert show];
             [alert release];
@@ -186,7 +188,7 @@
     [self setLoadingUI:NO];
     
     if (items.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。请电客服：18601024316 联系或给QQ号：910166361 联系留言，谢谢！" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         alert.tag = 999;
         [alert show];
         [alert release];
@@ -217,7 +219,7 @@
     [self setLoadingUI:NO];
     
     if (items.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。请电客服：18601024316 联系或给QQ号：910166361 联系留言，谢谢！" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您需要的文件尚未出版或未纳入公文包数据库，我们会尽快为您录入。请电客服：XXXXXX联系或给XXXX@XXX留言，谢谢!" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         alert.tag = 999;
         [alert show];
         [alert release];
@@ -303,28 +305,28 @@
 
     int temp = [self updateInterfaceWithReachability:hostReach];
     
-//    if (temp == 1) {
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请检查您的网络是否连接。" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-//        [alertView show];
-//        [alertView release];
-//    }else if (temp == 3){
-//        downloadTemp = (DocumentListItem *)[items objectAtIndex:row];
-//        
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您当前不在WIFI环境下，是否继续下载？" message:nil delegate:self cancelButtonTitle:@"否"otherButtonTitles:@"是",nil];
-//        alertView.tag = 101;
-//        [alertView show];
-//        [alertView release];
-    
-//    }else {
+    if (temp == 1) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请检查您的网络是否连接。" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    }else if (temp == 3){
+        downloadTemp = (DocumentListItem *)[items objectAtIndex:row];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"您当前不在WIFI环境下，是否继续下载？" message:nil delegate:self cancelButtonTitle:@"否"otherButtonTitles:@"是",nil];
+        alertView.tag = 101;
+        [alertView show];
+        [alertView release];
+        
+    }else {
         DocumentListItem *tempItem = (DocumentListItem *)[items objectAtIndex:row];
         
         [ConfigManager sharedManager].chooseBook = tempItem.bookName;
         
-        ChapterViewController *contentView = [[ChapterViewController alloc] initWithNibName:@"ChapterViewController" bundle:nil  withBookId:[NSString stringWithFormat:@"%d",[tempItem.bookId intValue]] withBookName: tempItem.bookName];
+        FourthViewController *contentView = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil withUrl:tempItem.bookUrl withId:[NSString stringWithFormat:@"%d",[tempItem.bookId intValue]] withTitle:tempItem.bookName];
         [contentView setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:contentView animated:YES];
         [contentView release];
-//    }
+    }
     
     [self.oneTableView reloadData];
 }
@@ -332,7 +334,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if(alertView.tag == 101 && buttonIndex == 1) {
-        ChapterViewController *contentView = [[ChapterViewController alloc] initWithNibName:@"ChapterViewController" bundle:nil  withId:[NSString stringWithFormat:@"%d",[downloadTemp.bookId intValue]] withTitle:downloadTemp.bookName];
+        FourthViewController *contentView = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil withUrl:downloadTemp.bookUrl withId:[NSString stringWithFormat:@"%d",[downloadTemp.bookId intValue]] withTitle:downloadTemp.bookName];
         [contentView setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:contentView animated:YES];
         [contentView release];
